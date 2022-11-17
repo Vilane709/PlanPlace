@@ -1,0 +1,99 @@
+<div class="wrapper">
+  <div [class]="menu">
+    <button href="#" [class]="menubtn" (click)="expand()">
+      <span></span>
+    </button>
+    <nav class="menu-list">
+      <a href="">Главная</a>
+      <a href="">Главная</a>
+      <a href="">Главная</a>
+      <a href="">Главная</a>
+    </nav>
+  </div>
+  <div [class]="content">
+    <header>
+      <h1>PlanPlace</h1>
+    </header>
+    <!-- <button class="entrance_button">Вход</button>
+    <span class="entrance">
+      <form>
+        <h2>Регистрация</h2>
+        <label id="namel"for="name">имя</label>
+        <input id="name" type="text" >
+    
+        <label id="maill" for="mail">номер телефона</label>
+        <input id="mail" type="email">
+    
+        <label id="passwordl"for="password">пароль</label>
+        <input id="password" type="number" min='10' max='300'>
+    
+        <label id="2passwordl"for="2password">введите пароль еще раз</label>
+        <input id="2password" type="number">
+    
+        <button>Зарегестрироваться</button>
+      </form>
+    </span> -->
+    <main>
+      <div class="week_days">
+        <ul>
+          <li><button routerLink="mon" routerLinkActive="week_day_active">Понедельник</button></li>
+          <li><button routerLink="tue" routerLinkActive="week_day_active">Вторник</button></li>
+          <li><button routerLink="wed" routerLinkActive="week_day_active">Среда</button></li>
+          <li><button routerLink="thu" routerLinkActive="week_day_active">Четверг</button></li>
+          <li><button routerLink="fri" routerLinkActive="week_day_active">Пятница</button></li>
+          <li><button routerLink="sat" routerLinkActive="week_day_active">Суббота</button></li>
+          <li><button routerLink="sun" routerLinkActive="week_day_active">Воскресенье</button></li>
+        </ul>
+      </div>
+      <router-outlet></router-outlet>
+      <section class="night">
+        <h2>Склько будем спать?</h2>
+        <div class="flexbox">
+          <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>25м</p>
+          </button>
+           <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>1ч 45м</p>
+          </button>
+          <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>3ч 15м</p>
+          </button>
+          <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>4ч 45м</p>
+          </button>
+        </div>
+        <div class="flexbox">
+          <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>6ч 15м</p>
+          </button>
+            <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>7ч 45м</p>
+          </button>
+          <button class="night_cycle">
+            <p class="time">00:00</p>
+            <p>9ч 15м</p>
+          </button>
+        </div>
+        <div class="sounds"> 
+          <h2>Звуки для сна</h2>
+          <ul>
+            <li><button class="sound">Лес</button></li>
+            <li><button class="sound">Дождь</button></li>
+            <li><button class="sound">Ветер</button></li>
+            <li><button class="sound">Волны</button></li>
+            <li><button class="sound">Огонь</button></li>
+            <li><button class="sound">Листья</button></li>
+            <li><button class="sound">Ход часов</button></li>
+            <li><button class="sound">Ливень</button></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
