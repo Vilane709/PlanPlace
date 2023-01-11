@@ -1,10 +1,14 @@
 <div class="container">
     <span class="work_bloks">
-        <button class="work" id="1" (click)="addPlan()">Сон</button>
-        <button class="work" id="1" (click)="addPlan()">Гимнастика</button>
-        <button class="work" id="1" (click)="addPlan()">Чтение</button>
-        <button class="work" id="1" (click)="addPlan()">Прогулка</button>
-        <button class="work" id="1" (click)="addPlan()">Отдых</button>
+
+        <ng-container *ngFor="let work of works">
+            <button class="work" id="1" (click)="addPlan(work)" (mousemove)="deleteButton()">{{ work }}</button>
+        </ng-container>
+
+        <!-- <button class="work" id="1" (click)="addPlan()" (mousemove)="deleteButton()">Сон</button>
+        <button class="work" id="1" (click)="addPlan()" (mousemove)="deleteButton()">Гимнастика</button>
+        <button class="work" id="1" (click)="addPlan()" (mousemove)="deleteButton()">Чтение</button>
+        <button class="work" id="1" (click)="addPlan()" (mousemove)="deleteButton()">Прогулка</button> -->
         <button class="work_plus" (click)="addWork()">+</button>
     </span>
     <span class="plan_bloks">

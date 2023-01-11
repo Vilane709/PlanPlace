@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   menu: string = "menu";
   content: string = "content";
+  public contentActive: boolean = false;
+
   menubtn: string = "menubtn";
   // menu: string = "menu_active"
   expand() {
@@ -17,11 +19,7 @@ export class AppComponent {
       this.menu = "menu"
     }
 
-    if (this.content === "content") {
-      this.content = "content_active"
-    } else {
-      this.content = "content"
-    }
+    this.contentActive = !this.contentActive;
 
     if (this.menubtn === "menubtn") {
       this.menubtn = "menubtn_active"

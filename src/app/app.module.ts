@@ -12,6 +12,7 @@ import { SaturdayPlanComponent } from './saturday-plan/saturday-plan.component';
 import { SundayPlanComponent } from './sunday-plan/sunday-plan.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { PlanWorkPopupComponent } from './shared/components/plan-work-popup/plan-work-popup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     FridayPlanComponent,
     SaturdayPlanComponent,
     SundayPlanComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PlanWorkPopupComponent
   ],
   imports: [
     BrowserModule,

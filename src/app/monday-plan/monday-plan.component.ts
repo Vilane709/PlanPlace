@@ -1,20 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanWorkPopupService } from '../shared/services/plan-work-popup.service';
 
 @Component({
   selector: 'app-monday-plan',
   templateUrl: './monday-plan.component.html',
-  styleUrls: ['./monday-plan.component.css']
+  styleUrls: ['./monday-plan.component.css'],
+  providers: [
+    PlanWorkPopupService
+  ]
 })
 export class MondayPlanComponent implements OnInit {
-  constructor() { }
+
+  public works: string[] = [
+    'Сон', 'Гимнастика', 'Чтение', 'Прогулка'
+  ];
+
+  constructor(
+    private planWorkPopupService: PlanWorkPopupService
+  ) { }
   ngOnInit(): void { }
 
 
   addWork() {
-    console.log('Не знаю как обратиться к work_bloks из другого документа, чтобы создать ему дочерний. Еще нужно в новый блок вписывать его название. При нажатии правой кнопки мыши, отображать кнопку удаления.')
+    console.log('Добавить еще одну кнопку к спану work_bloks, наименовать ее.')
   }
 
-  addPlan() {
-    console.log('Не знаю как обратиться к plan_bloks из другого документа, чтобы создать ему дочерний. Могу ли я в grid-template-columns поставить переменные как количества фракций/процентов? Как поставить один блок поверх другого.')
+  public addPlan(work: string): void {
+    this.planWorkPopupService.createPopup(work);
+    console.log('Могу ли я в grid-template-columns поставить переменные как количества фракций/процентов?')
+  }
+
+  deleteButton() {
+    console.log('Отобразить рядом крестик, удаляющий кнопку.')
   }
 }
